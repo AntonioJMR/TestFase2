@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Roles Middleware API",
+        "description": "API para la gestión de roles de usuario",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/admin/dashboard": {
+            "get": {
+                "summary": "Obtener el dashboard del administrador",
+                "description": "Requiere que el usuario esté autenticado y tenga el rol de 'admin'.",
+                "operationId": "a51471f062eb18ae7bf62d4ccc55ab7e",
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Bienvenido, administrador."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Acceso denegado. El usuario no tiene el rol 'admin'."
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    }
+}
