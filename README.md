@@ -1,6 +1,23 @@
 Prueba Técnica:
 -----------------------------------
+-----------------------------------
+Instalación:
+-----------------------------------
+Debemos instalar Laravel 12:
 
+Para ello lo más recomendable es descargar e instalar el manejador de paquetes Composer.
+También deberemos descargar Node.js para descargar algunos paquetes adicionales.
+Deberíamos tener instalado para la BBDD en este caso hemos usado XAMP con MySQL
+
+Para instalar y configurar Laravel debemos escribir en la terminal:
+   >> composer create-project laravel/laravel TestFase2
+   >> cd TestFase2
+   >> composer require laravel/breeze --dev
+   >> php artisan breeze:install
+   >> php artisan migrate
+
+Para arracar el proyecto: 
+   >> php artisan serve
 
 -----------------------------------
 Preguntas:
